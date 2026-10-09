@@ -4,47 +4,7 @@ This guide provides step-by-step instructions to configure a **Windows Subsystem
 
 ---
 
-## Step 1: Install & Enable WSL (Ubuntu)
-
-1. Open **PowerShell** as Administrator on your Windows machine.
-2. Run the following command to install WSL and Ubuntu:
-   ```bash
-   wsl --install
-   ```
-3. Restart your computer if prompted.
-4. Open the **Ubuntu** application from your Windows Start Menu and set up your Linux username and password.
-
----
-
-## Step 2: Install Miniconda in WSL
-
-Inside your Ubuntu WSL terminal, run the following commands to download and install Miniconda:
-
-```bash
-# Update system packages
-sudo apt update && sudo apt upgrade -y
-sudo apt install wget curl git -y
-
-# Download Miniconda installer
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-
-# Run installer
-bash miniconda.sh -b -p $HOME/miniconda
-
-# Initialize Conda in bash shell
-eval "$($HOME/miniconda/bin/conda shell.bash hook)"
-conda init bash
-source ~/.bashrc
-```
-
-Verify the installation:
-```bash
-conda --version
-```
-
----
-
-## Step 3: Create Conda Environment from `environment.yml`
+## Step 1: Create Conda Environment from `environment.yml`
 
 Navigate to your project directory inside WSL where `environment.yml` is located:
 
@@ -61,7 +21,7 @@ conda activate sp500-ml-trading
 
 ---
 
-## Step 4: Launch JupyterLab / Jupyter Notebook
+## Step 2: Launch JupyterLab / Jupyter Notebook
 
 With the `sp500-ml-trading` environment activated, launch JupyterLab:
 
@@ -73,7 +33,7 @@ Copy the local URL provided in the terminal (e.g., `http://127.0.0.1:8888/lab?to
 
 ---
 
-## Step 5: Sequential Execution Order of Notebooks
+## Step 3: Sequential Execution Order of Notebooks
 
 Run the deliverables in the following chronological sequence:
 
