@@ -215,7 +215,7 @@ with tab4:
 with tab5:
     st.subheader("Data Leakage Guardrails & Model Improvements")
     
-    st.markdown("""
+    st.markdown(r"""
     ### 🛡️ Data Leakage Guardrails Implemented
     1. **Strict 1-Day Lagging (`shift(1)`)**: Features computed on day $t-1$ are used to predict signal for day $t$.
     2. **Chronological Train/Test Split**: Strictly split by date range (Train: 2010–2020, Test: 2023–2024). No random shuffling.
